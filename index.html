@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GifTastic!!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+ 
+</head>
+
+<body>
+
+  <!--  Grid -->
+    <div class="container">
+
+      <!-- Animals buttons row-->
+      <div class="row" id="buttonRow"></div><br>
+                      
+      <!-- Gifs and User form row-->
+      <div class="row">
+
+        <!--Animal Gifs -->
+        <div class="col-lg-8" id="gif"></div><br> 
+                      
+        <!-- User form -->
+        <div class="col-lg-4 form"> 
+          <form id="animal-form">
+            <label for="animal-input" class="inputLabel">Add an animal</label>
+            <input type="text" id="animal-input"><br>
+            <input id="add-animal" type="submit" value="Submit">
+          </form>
+        </div> 
+
+      </div> 
+
+    </div> 
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
