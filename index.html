@@ -1,43 +1,56 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 
-<html lang="en">
+  <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>GifTastic!!</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
- 
-</head>
+  <head>
+      <meta charset="UTF-8">
+      <title>GifTastic!!</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  
+  <style>
+      #animal-form{
+        font-size: larger; 
+        
+      }
+      #animal-input {
+        height: 20px;
+        width: 20%;
+      }
+      #add-animal{
+        background: #008B8B;
+        height: 20px;
+        font-size: medium;
+        border-radius: 10px;
+        color: white;
+      }
+  </style>
 
-<body>
+  </head>
 
-  <!--  Grid -->
-    <div class="container">
+  <body>
 
-      <!-- Animals buttons row-->
-      <div class="row" id="buttonRow"></div><br>
-                      
-      <!-- Gifs and User form row-->
-      <div class="row">
+      <div class="container">
 
-        <!--Animal Gifs -->
-        <div class="col-lg-8" id="gif"></div><br> 
-                      
+        <!-- Animals buttons -->
+        <div id="buttonRow"></div>
+            <br>           
         <!-- User form -->
-        <div class="col-lg-4 form"> 
-          <form id="animal-form">
-            <label for="animal-input" class="inputLabel">Add an animal</label>
-            <input type="text" id="animal-input"><br>
-            <input id="add-animal" type="submit" value="Submit">
-          </form>
+            <form id="animal-form">
+              <label for="animal-input" class="inputLabel">Add an animal</label>
+              <input type="text" id="animal-input"><br>
+              <input id="add-animal" type="submit" value="Submit">
+            </form>
+          
+            <br>
+          <!-- Animal Gifs -->
+          <div id="gif"></div>
+
         </div> 
 
       </div> 
 
-    </div> 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-</body>
+      <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
 
-</html>
+  </html>

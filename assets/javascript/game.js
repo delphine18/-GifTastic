@@ -1,22 +1,24 @@
 
-  var topics = ["rabbit", "rat", "snake", "cheetah","elephant","hyena", "cat", "lion", "pig", "dog",
-  "goat", "giraffe", "cow", "crocodile", "bird","panda", "chicken", "kangaroo", "eagle", "cheetah", "cow"];
+  var topics = ["rabbit", "snake","elephant","hyena", "cat", "lion", "pig", "dog",
+  "goat", "giraffe", "chicken", "kangaroo", "eagle", "cheetah", "cow"];
 
-  // Function to generate and  display buttons for all the animals within the topics array.
+  // 01 : Function to generate and  display buttons for all the animals within the topics array.
   function renderButtons() {
   $("#buttonRow").empty();
 
-  for (var i = 0; i < topics .length; i++) {
+  for (var i = 0; i < topics.length; i++) {
   var button = $("<button>");
   button.addClass("animalButton");
   button.attr("data-animal", topics [i]);
   button.text(topics[i]);
-
   $("#buttonRow").append(button);
+
+  $(".animalButton").css({"background-color":"#008B8B","border" : "1px solid black",
+  "padding" : "10px","font-size" : "medium","margin" : "0 0 2px 2px","border-radius" : "10px","color" : "white"})
   }
   }
 
-  // To add more animals to the array
+  // 02 : Function to add more animals to the array
   $("#add-animal").on("click", function(event) {
   event.preventDefault();
 
@@ -29,7 +31,7 @@
 
   });
 
-  // To retrieve animal Gifs with the Giphy API
+  // 03 : To retrieve animal Gifs with the Giphy API
   function retrAnimalGifs() {
 
   var name = $(this).attr("data-animal");
@@ -47,7 +49,7 @@
 
   var dataArr = response.data;
 
-  // Create and display div elements for every retrieved Gif
+  // 04 : Create and display div elements for every retrieved Gif
   $("#gif").empty();
   for (var i = 0; i < dataArr.length; i++) {
   var gifDiv = $("<div>");
@@ -64,11 +66,12 @@
   gifDiv.append(image);
 
   $("#gif").append(gifDiv);
-  }
-  });
+  $(".animalGif").css({"float":"left","margin-left" : "3px"})
+   }
+   });
   }
 
-  //To animate a still Gif and stop an animated Gif
+  // 05 : To animate a still Gif and stop an animated Gif
   function animateGif() {
 
   var state = $(this).find("img").attr("data-state");
@@ -88,6 +91,4 @@
   $(document).on("click", ".animalButton", retrAnimalGifs);
 
   $(document).on("click", ".animalGif", animateGif);
-
- 
 
